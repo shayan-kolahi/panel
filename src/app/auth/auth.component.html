@@ -1,0 +1,74 @@
+<section class="logIn">
+  <div class="container h-100 d-flex justify-content-center align-items-center">
+    <div class="logIn-form col-5 m-auto rounded p-4">
+
+      <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="ورود">
+          <div class="d-flex flex-column w-100 h-100 px-2">
+            <div class="mb-3 text-white">
+              <label class="form-label">نام کاربری</label>
+              <input [(ngModel)]="logIn.email" type="email" class="form-control p-2">
+            </div>
+            <div class="mb-3 text-white">
+              <label class="form-label d-flex justify-content-between align-items-center">رمز عبور</label>
+              <input [(ngModel)]="logIn.pass" type="password" class="form-control p-2">
+              <a class="a_link" href="javascript:">فراموشی رمز عبور</a>
+            </div>
+            <div class="mt-auto d-flex justify-content-center flex-column align-items-center">
+              <button (click)="logInClick()" type="submit" class="btn btn-danger px-5">ثبت</button>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="ثبت نام">
+          <div class="d-flex flex-column w-100 h-100 px-2">
+            <div class="mb-3 text-white">
+              <label class="form-label">نام</label>
+              <input [(ngModel)]="register.name" type="email" class="form-control p-2">
+            </div>
+            <div class="mb-3 text-white">
+              <label class="form-label">نام کاربری</label>
+              <input [(ngModel)]="register.email" type="email" class="form-control p-2">
+            </div>
+            <div class="d-flex flex-wrap">
+              <div class="col-6 p-1 mb-3 text-white">
+                <label class="form-label d-flex justify-content-between align-items-center">رمز عبور</label>
+                <input [(ngModel)]="register.pass" type="password" class="form-control p-2">
+              </div>
+              <div class="col-6 p-1 mb-3 text-white">
+                <label class="form-label d-flex justify-content-between align-items-center">تکرار رمز عبور</label>
+                <input [(ngModel)]="register.passR" type="password" class="form-control p-2">
+              </div>
+            </div>
+            <div class="mt-auto d-flex justify-content-center flex-column align-items-center">
+              <button (click)="registerClick()" type="submit" class="btn btn-danger px-5">ثبت</button>
+            </div>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </div>
+</section>
+
+
+
+<lib-toastify-toast-container
+  [position]="'top-right'"
+  [transition]="'bounce'"
+  [autoClose]="5000"
+  [hideProgressBar]="false"
+  [newestOnTop]="false"
+  [closeOnClick]="true"
+  [pauseOnHover]="true"
+  [pauseOnVisibilityChange]="true"
+  [iconLibrary]="'none'"
+></lib-toastify-toast-container>
